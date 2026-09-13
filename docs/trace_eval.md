@@ -28,23 +28,33 @@ Dán 1 đoạn trích xuất log tiêu biểu từ file `docs/trace_waterfall.js
 [
   {
     "step": 1,
-    "query": "Hãy đặt lịch hẹn tư vấn học vụ cho tôi (Mã SV: SV2026001) vào lúc 14:00 ngày 20/09/2026.",
+    "query": "Hãy tra cứu thông tin học vụ của sinh viên SV2026001.",
     "action_type": "TOOL_EXECUTION",
-    "tool_name": "schedule_appointment",
+    "tool_name": "academic_query",
     "arguments": {
-      "student_id": "SV2026001",
-      "datetime_str": "14:00 15/09/2026",
-      "advisor_name": "PGS.TS Nguyễn Văn A"
+      "student_id": "SV2026001"
     },
     "observation": {
       "status": "SUCCESS",
-      "booking_id": "BK-SV2026001-99",
       "student_id": "SV2026001",
-      "datetime": "14:00 15/09/2026",
-      "advisor": "PGS.TS Nguyễn Văn A",
-      "message": "Đặt lịch thành công cho sinh viên SV2026001 với PGS.TS Nguyễn Văn A vào lúc 14:00 15/09/2026."
+      "data": {
+        "full_name": "Nguyễn Văn An",
+        "class": "AI-K4",
+        "gpa": 3.85,
+        "email": "an.nv@vinuni.edu.vn",
+        "status": "Đang học",
+        "advisor": "PGS.TS Nguyễn Văn A"
+      }
     },
-    "latency_ms": 0.0
+    "latency_ms": 1745.05
+  },
+  {
+    "step": 2,
+    "query": "Hãy tra cứu thông tin học vụ của sinh viên SV2026001.",
+    "action_type": "FINAL_ANSWER",
+    "thought": "Tổng hợp kết quả từ MCP Server thành công.",
+    "output": "Kết quả tra cứu cho sinh viên SV2026001 (Nguyễn Văn An): Lớp AI-K4, GPA: 3.85, Email: an.nv@vinuni.edu.vn, Trạng thái: Đang học, Cố vấn: PGS.TS Nguyễn Văn A.",
+    "latency_ms": 10.0
   }
 ]
 ```
