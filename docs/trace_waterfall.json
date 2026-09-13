@@ -4,8 +4,8 @@
     "query": "Chào bạn, bạn có thể giới thiệu quy chế học vụ cơ bản của Đại học VinUni không?",
     "action_type": "FINAL_ANSWER",
     "thought": "Gemini phản hồi trực tiếp bằng văn bản (không cần gọi công cụ).",
-    "output": "Chào bạn, tôi là Trợ lý Tác tử Học vụ Thông minh của Đại học VinUni. Rất vui được hỗ trợ bạn.\n\nVề quy chế học vụ cơ bản của Đại học VinUni, tôi có thể cung cấp một số thông tin chung như sau:\n\n*   **Hệ thống tín chỉ:** VinUni áp dụng hệ thống tín chỉ ECTS (European Credit Transfer and Accumulation System), mỗi tín chỉ tương đương với một khối lượng học tập nhất định.\n*   **Đánh giá kết quả học tập:** Sinh viên được đánh giá dựa trên nhiều yếu tố như điểm chuyên cần, bài tập, bài kiểm tra giữa kỳ, cuối kỳ, và các dự án.\n*   **Điều kiện tốt nghiệp:** Để tốt nghiệp, sinh viên cần hoàn thành đủ số tín chỉ quy định của chương trình học, đạt điểm trung bình tích lũy (GPA) tối thiểu, và đáp ứng các yêu cầu khác như trình độ ngoại ngữ, thực tập, hoặc khóa luận tốt nghiệp.\n*   **Các quy định khác:** Bao gồm quy định về đăng ký môn học, rút môn, bảo lưu kết quả, xử lý vi phạm học vụ, v.v.\n\nĐể biết thông tin chi tiết và chính xác nhất về quy chế học vụ, bạn nên tham khảo Sổ tay sinh viên hoặc liên hệ trực tiếp với Phòng Đào tạo của VinUni.\n\nBạn có câu hỏi nào khác không?",
-    "latency_ms": 4489.24
+    "output": "Chào bạn, tôi là Trợ lý Tác tử Học vụ Thông minh của Đại học VinUni. Rất vui được hỗ trợ bạn.\n\nVề quy chế học vụ cơ bản của Đại học VinUni, bạn có thể tham khảo các thông tin sau:\n\n*   **Hệ thống tín chỉ:** VinUni áp dụng hệ thống tín chỉ ECTS (European Credit Transfer and Accumulation System), mỗi tín chỉ tương đương với khoảng 25-30 giờ học tập.\n*   **Cấu trúc chương trình:** Các chương trình đào tạo được thiết kế theo cấu trúc cử nhân, thạc sĩ, tiến sĩ với các môn học đại cương, cơ sở ngành và chuyên ngành.\n*   **Đánh giá kết quả học tập:** Sinh viên được đánh giá thông qua nhiều hình thức như bài kiểm tra, bài tập lớn, thuyết trình, dự án và thi cuối kỳ. Thang điểm thường là A, B, C, D, F.\n*   **Điều kiện tốt nghiệp:** Để tốt nghiệp, sinh viên cần hoàn thành đủ số tín chỉ quy định, đạt điểm trung bình tích lũy (GPA) tối thiểu và đáp ứng các yêu cầu khác của chương trình (ví dụ: thực tập, đồ án tốt nghiệp).\n*   **Cố vấn học tập:** Mỗi sinh viên đều có một cố vấn học tập để hỗ trợ trong quá trình học tập, định hướng nghề nghiệp và giải quyết các vấn đề liên quan.\n\nĐây là những thông tin cơ bản nhất. Nếu bạn muốn tìm hiểu sâu hơn về một khía cạnh cụ thể nào đó, hoặc muốn tra cứu thông tin học vụ cá nhân, đừng ngần ngại hỏi nhé!",
+    "latency_ms": 4742.23
   },
   {
     "step": 1,
@@ -27,7 +27,7 @@
         "advisor": "PGS.TS Nguyễn Văn A"
       }
     },
-    "latency_ms": 1745.05
+    "latency_ms": 585.85
   },
   {
     "step": 2,
@@ -40,40 +40,38 @@
   {
     "step": 1,
     "query": "Hãy đặt lịch hẹn tư vấn học vụ cho tôi (Mã SV: SV2026001) vào lúc 14:00 ngày 20/09/2026.",
+    "action_type": "TOOL_EXECUTION",
+    "tool_name": "schedule_appointment",
+    "arguments": {
+      "student_id": "SV2026001",
+      "datetime_str": "14:00 15/09/2026",
+      "advisor_name": "PGS.TS Nguyễn Văn A"
+    },
+    "observation": {
+      "status": "SUCCESS",
+      "booking_id": "BK-SV2026001-99",
+      "student_id": "SV2026001",
+      "datetime": "14:00 15/09/2026",
+      "advisor": "PGS.TS Nguyễn Văn A",
+      "message": "Đặt lịch thành công cho sinh viên SV2026001 với PGS.TS Nguyễn Văn A vào lúc 14:00 15/09/2026."
+    },
+    "latency_ms": 962.93
+  },
+  {
+    "step": 2,
+    "query": "Hãy đặt lịch hẹn tư vấn học vụ cho tôi (Mã SV: SV2026001) vào lúc 14:00 ngày 20/09/2026.",
     "action_type": "FINAL_ANSWER",
-    "thought": "Gemini phản hồi trực tiếp bằng văn bản (không cần gọi công cụ).",
-    "output": "Bạn muốn đặt lịch hẹn tư vấn học vụ vào lúc 14:00 ngày 20/09/2026 với mã sinh viên SV2026001. Vui lòng cho tôi biết tên cố vấn học tập mà bạn muốn gặp để tôi có thể đặt lịch hẹn chính xác.",
-    "latency_ms": 1895.62
+    "thought": "Tổng hợp kết quả từ MCP Server thành công.",
+    "output": "Đặt lịch thành công cho sinh viên SV2026001 với PGS.TS Nguyễn Văn A vào lúc 14:00 15/09/2026.",
+    "latency_ms": 10.0
   },
   {
     "step": 1,
     "query": "Tôi là sinh viên SV2026002, hãy tìm cố vấn học tập của tôi và đặt một lịch hẹn với thầy/cô ấy vào 09:00 ngày 25/10/2026.",
-    "action_type": "TOOL_EXECUTION",
-    "tool_name": "academic_query",
-    "arguments": {
-      "student_id": "SV2026002"
-    },
-    "observation": {
-      "status": "SUCCESS",
-      "student_id": "SV2026002",
-      "data": {
-        "full_name": "Trần Thị Bình",
-        "class": "AI-K4",
-        "gpa": 3.6,
-        "email": "binh.tt@vinuni.edu.vn",
-        "status": "Đang học",
-        "advisor": "TS. Lê Thị B"
-      }
-    },
-    "latency_ms": 2038.74
-  },
-  {
-    "step": 2,
-    "query": "Tôi là sinh viên SV2026002, hãy tìm cố vấn học tập của tôi và đặt một lịch hẹn với thầy/cô ấy vào 09:00 ngày 25/10/2026.",
     "action_type": "FINAL_ANSWER",
-    "thought": "Tổng hợp kết quả từ MCP Server thành công.",
-    "output": "Kết quả tra cứu cho sinh viên SV2026002 (Trần Thị Bình): Lớp AI-K4, GPA: 3.6, Email: binh.tt@vinuni.edu.vn, Trạng thái: Đang học, Cố vấn: TS. Lê Thị B.",
-    "latency_ms": 10.0
+    "thought": "Câu hỏi chung về quy chế học vụ, trả lời trực tiếp không cần gọi Tool.",
+    "output": "[Mock Agent Response]: Xin chào! Quy chế học vụ VinUni yêu cầu sinh viên tích lũy tối thiểu 120 tín chỉ và duy trì GPA trên 2.0 để tốt nghiệp.",
+    "latency_ms": 537.19
   },
   {
     "step": 1,
@@ -87,7 +85,7 @@
       "status": "NOT_FOUND",
       "message": "Không tìm thấy dữ liệu sinh viên có mã 'SV9999999'"
     },
-    "latency_ms": 1693.46
+    "latency_ms": 1891.43
   },
   {
     "step": 2,
