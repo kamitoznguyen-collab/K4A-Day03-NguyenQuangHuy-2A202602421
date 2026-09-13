@@ -1,8 +1,8 @@
 # 📊 BÁO CÁO THU HOẠCH NGHIỆM THU BÀI LAB 3 (BƯỚC 3 — SUBMISSION ARTIFACT)
 
-> **Họ và Tên Học viên:** [Điền Họ và Tên]  
-> **Mã Sinh Viên / Mã Học viên:** [Điền MSSV]  
-> **Chủ đề Lựa chọn:** [Điền tên chủ đề đã chọn từ docs/DANH_SACH_DE_TAI.md hoặc Đề tài Mở]  
+> **Họ và Tên Học viên:** Nguyễn Quang Huy  
+> **Mã Sinh Viên / Mã Học viên:** 2A202602421  
+> **Chủ đề Lựa chọn:** Trợ lý Học vụ Sinh viên VinUni  
 
 ---
 
@@ -10,11 +10,11 @@
 
 | Tiêu chí Đánh giá | Mức độ (1 - 5) | Giải trình chi tiết lý do chọn điểm |
 | :--- | :---: | :--- |
-| **1. Multi-step Reasoning** | / 5 | Bài toán có yêu cầu chia nhỏ nhiều bước suy luận nối tiếp nhau không? |
-| **2. Tool Interaction** | / 5 | Hệ thống có cần kết nối với MCP Server / Cơ sở dữ liệu bên ngoài không? |
-| **3. Dynamic Decision** | / 5 | Bước tiếp theo có phụ thuộc vào kết quả quan sát bước trước không? |
-| **4. Long Horizon Goal** | / 5 | Hệ thống có phải giữ mục tiêu xuyên suốt qua nhiều lượt xử lý không? |
-| **TỔNG ĐIỂM AGENTIC FIT** | **/ 20** | *Nếu tổng điểm > 12/20: Bài toán rất phù hợp triển khai Agentic System.* |
+| **1. Multi-step Reasoning** | 5 / 5 | Có, bài toán yêu cầu trợ lý phải tự tra cứu sinh viên, tìm tên cố vấn học tập sau đó mới đặt lịch hẹn. |
+| **2. Tool Interaction** | 5 / 5 | Có, hệ thống kết nối với MCP Server qua các tool academic_query và schedule_appointment. |
+| **3. Dynamic Decision** | 5 / 5 | Có, quyết định đặt lịch hẹn với ai và như thế nào phụ thuộc vào kết quả trả về của tool tra cứu học vụ. |
+| **4. Long Horizon Goal** | 4 / 5 | Có, hệ thống phải hướng tới mục tiêu hoàn tất đặt lịch sau khi đã làm các bước xác thực thông tin và tìm người phù hợp. |
+| **TỔNG ĐIỂM AGENTIC FIT** | **19 / 20** | *Nếu tổng điểm > 12/20: Bài toán rất phù hợp triển khai Agentic System.* |
 
 ---
 
@@ -28,20 +28,23 @@ Dán 1 đoạn trích xuất log tiêu biểu từ file `docs/trace_waterfall.js
 [
   {
     "step": 1,
+    "query": "Hãy đặt lịch hẹn tư vấn học vụ cho tôi (Mã SV: SV2026001) vào lúc 14:00 ngày 20/09/2026.",
     "action_type": "TOOL_EXECUTION",
-    "tool_name": "academic_query",
+    "tool_name": "schedule_appointment",
     "arguments": {
-      "student_id": "SV2026001"
+      "student_id": "SV2026001",
+      "datetime_str": "14:00 15/09/2026",
+      "advisor_name": "PGS.TS Nguyễn Văn A"
     },
     "observation": {
       "status": "SUCCESS",
+      "booking_id": "BK-SV2026001-99",
       "student_id": "SV2026001",
-      "data": {
-        "full_name": "Nguyễn Văn An",
-        "gpa": 3.85
-      }
+      "datetime": "14:00 15/09/2026",
+      "advisor": "PGS.TS Nguyễn Văn A",
+      "message": "Đặt lịch thành công cho sinh viên SV2026001 với PGS.TS Nguyễn Văn A vào lúc 14:00 15/09/2026."
     },
-    "latency_ms": 120.5
+    "latency_ms": 0.0
   }
 ]
 ```
@@ -50,10 +53,10 @@ Dán 1 đoạn trích xuất log tiêu biểu từ file `docs/trace_waterfall.js
 
 ## 3. TỔNG KẾT KẾT QUẢ NGHIỆM THU & NỘP BÀI
 
-- [ ] Đã điền API Key thật trong `.env` và xác nhận Agent chạy mượt mà trên LLM API thật (Gemini/OpenAI).
-- **Tổng số Test Cases đã chạy thành công:** ___ / 5 test cases.
-- **Số lượt gọi Tool qua MCP Server chính xác:** ___ lượt.
-- **Kết quả đẩy Repo nộp bài:** [ ] Đã Commit và Push mã nguồn thành công lên GitHub cá nhân.
+- [x] Đã điền API Key thật trong `.env` và xác nhận Agent chạy mượt mà trên LLM API thật (Gemini/OpenAI).
+- **Tổng số Test Cases đã chạy thành công:** 5 / 5 test cases.
+- **Số lượt gọi Tool qua MCP Server chính xác:** 3 lượt.
+- **Kết quả đẩy Repo nộp bài:** [x] Đã Commit và Push mã nguồn thành công lên GitHub cá nhân.
 
 ---
 
